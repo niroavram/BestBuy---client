@@ -11,12 +11,25 @@ const ActionsBar = ({
   setSearch,
   getProductsWithquery,
   elements_by_users,
+  productType,
+  setProductType
 }) => {
   const classes = useStyles();
+  const onHandleClick = () => {
+    let pages = productType;
+    for (let key in pages) {
+      if (key === 'add') {
+        pages[key] = true;
+      } else {
+        pages[key] = false;
+      }
+    }
+    setProductType(pages);  
+};
 
   return (
     <div className={classes.header}>
-      <BaseButton text="Add" />
+      <BaseButton text="Add" onClickB={()=>onHandleClick()} />
       <SearchButton setSearch={setSearch} />
       <SortSelect
         setElements_by_users={setElements_by_users}

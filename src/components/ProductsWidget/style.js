@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   product:{
      display: 'flex',
-    backgroundColor: COLORS.gray2,
+    backgroundColor: COLORS.primary2,
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
@@ -69,6 +69,13 @@ titleA:{
     fontFamily: FONTS.largeTitle,
     fontSize: SIZES.h1,
     color: COLORS.darkGray,
+},
+pageNextPrev:{
+    backgroundColor: COLORS.orangePrimary,
+    borderWidth: 0.5,
+    borderRadius: 15,
+    flexWrap: 'wrap',
+    flexGrow: 1,
 }
 }));
 export default useStyles;

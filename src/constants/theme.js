@@ -1,7 +1,7 @@
 
 export const COLORS = {
-    primary: "#e0fbfc", //turkiz
-    primaryLight: "#b2e6d2",
+    primary: "#fdf0d5", //turkiz
+    primary2: "#003049",
     darkWhite: "#ebebd3",
     transparentPrimray: 'rgba(227, 120, 75, 0.4)',
     orange: "#FFA133",
@@ -13,7 +13,7 @@ export const COLORS = {
     lightOrange2: "#FDDED4",
     lightOrange3: '#FFD9AD',
     green: "#00f5d4",
-    red: "#FF1717",
+    red: "#c1121f",
     red2: "#ffcbf2",
     blue: '#0064C0',
     darkBlue: "#111A2C",
@@ -22,7 +22,7 @@ export const COLORS = {
     gray: "#898B9A",
     gray2: "#BBBDC1",
     gray3: '#CFD0D7',
-    lightGray1: "#a8dadc",
+    lightGray1: "#669bbc",
     lightGray2: "#F5F5F8",
     white2: "#FBFBFB",
     white: '#f8f9fa',

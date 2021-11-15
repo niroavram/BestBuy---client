@@ -5,15 +5,18 @@ import BaseButton from "../Buttons/BaseButton";
 import EditIcon from "@mui/icons-material/Edit";
 import { COLORS } from "../../constants";
 
-const Product = ({ products, setSelectedProduct, selectedProduct }) => {
+const Product = ({ products, setSelectedProduct, productSectionManeger,deleteProduct }) => {
   const classes = useStyles();
   const onHandleClick = (p) => {
     setSelectedProduct(p);
+    productSectionManeger('description')
   };
-  // console.log(products)
+  const handleClickDeleteItem = (p) => {
+    deleteProduct(p);
+  };
   return (
     <div className={classes.products}>
-      {products.map((product) => {
+      {products?products.map((product) => {
         return (
           <div
             component="button"
@@ -50,11 +53,11 @@ const Product = ({ products, setSelectedProduct, selectedProduct }) => {
               <Typography>Review {product.customerReviewAverage}</Typography>
             </Link>
             <div className={classes.productAction}>
-            <BaseButton text="Delete" coolor={COLORS.red} />
+            <BaseButton text="Delete" coolor={COLORS.red} onClickB={()=>handleClickDeleteItem(product)} />
             </div>
           </div>
         );
-      })}
+      }):null}
     </div>
   );
 };
